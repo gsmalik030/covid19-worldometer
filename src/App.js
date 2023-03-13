@@ -7,20 +7,20 @@ import Navbar from './components/Navbar';
 import Details from './components/Details';
 import Home from './components/Home';
 function App() {
-const dispatch = useDispatch()
-console.log(getCountryData())
-useEffect(()=>{
-  dispatch(getCountryData())
-},[])
+  const dispatch = useDispatch();
+  console.log(getCountryData());
+  useEffect(() => {
+    dispatch(getCountryData());
+  }, []);
   return (
     <>
-    <BrowserRouter>
-    <Navbar />
-    <Routes>
-      <Route exact path='/' element={<Home />} />
-      <Route exact path='/details' element={<Details />} />
-    </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/details' element={<Details />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
