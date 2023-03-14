@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-const url = 'https://disease.sh/v3/covid-19/countries';
+const url = 'https://disease.sh/v3/covid-19/countries/';
 
 const initialState = {
   covidData: [],
@@ -9,26 +9,27 @@ const initialState = {
 
 export const getCountryData = createAsyncThunk(
   'country/getCountryData',
-  async (dispatch) => {
+  async (country) => {
+    const url = `https://disease.sh/v3/covid-19/countries/${country}`
     try {
         const resp = await axios(url);
         const data = resp.data;
-        const countriesData = [];
-      data.forEach((element) => {
-        countriesData.push({
-          id: element.countryInfo._id,
-          country: element.country,
-          population:element.population,
-          flag: element.countryInfo.flag,
-          cases: element.cases,
-          deaths: element.deaths,
-          recovered: element.recovered,
-          continent: element.continent,
-          tests: element.tests,
-          iso: element.countryInfo.iso2,
-        });
-      });
-    return countriesData;
+      //   const countriesData = [];
+      // data.forEach((element) => {
+      //   countriesData.push({
+      //     id: element.countryInfo._id,
+      //     country: element.country,
+      //     population:element.population,
+      //     flag: element.countryInfo.flag,
+      //     cases: element.cases,
+      //     deaths: element.deaths,
+      //     recovered: element.recovered,
+      //     continent: element.continent,
+      //     tests: element.tests,
+      //     iso: element.countryInfo.iso2,
+      //   });
+      // });
+    return data;
     } catch (error) {}
   }
 );

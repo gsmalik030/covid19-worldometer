@@ -1,0 +1,40 @@
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+const url = 'https://disease.sh/v3/covid-19/countries/';
+
+const initialState = {
+  covidData: [],
+  isLoading: true,
+};
+
+export const getDetailsData = createAsyncThunk(
+  'country/getDetailsData',
+  async (country) => {
+    const url = `https://disease.sh/v3/covid-19/countries/${country}`
+    try {
+        const resp = await axios(url);
+        const data = resp.data;
+    return data;
+    } catch (error) {}
+  }
+);
+
+const detailsSlice = createSlice({
+  name: 'details',
+  initialState,
+  extraReducers: {
+    [getDetailsData.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [getDetailsData.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      console.log(action);
+      state.detailsData = action.payload;
+    },
+    [getDetailsData.rejected]: (state) => {
+      state.isLoading = false;
+    },
+  },
+});
+
+export default detailsSlice.reducer;
