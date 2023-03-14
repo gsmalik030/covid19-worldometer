@@ -1,9 +1,16 @@
-import React from 'react'
+import { NavLink } from 'react-router-dom';
+import { FaMicrophone, FaArrowLeft } from 'react-icons/fa';
+import { FiSettings } from 'react-icons/fi';
 
-const Navbar = () => {
-  return (
-    <div>Navbar</div>
-  )
-}
+const Navbar = () => (
+  <header className='navbar'>
+    <NavLink className="backArrow" to="/"><FaArrowLeft /></NavLink>
+    <h4>Covid-19 Worldometer</h4>
+    <div className="icons">
+      <span><FaMicrophone /></span>
+      <span><FiSettings /></span>
+    </div>
+  </header>
+);
 
-export default Navbar
+export default Navbar;

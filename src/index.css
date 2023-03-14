@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +11,23 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.navbar{
+  background-color: rgb(236, 76, 138);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.backArrow{
+  color: white;
+  padding-left: 1.5rem;
+}
+
+.icons{
+  padding-right: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
