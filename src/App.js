@@ -12,6 +12,9 @@ function App() {
   useEffect(() => {
     dispatch(getDetailsData("Afghanistan"));
   }, []);
+  useEffect(() => {
+    dispatch(getCountryData());
+  }, []);
   return (
     <>
       <BrowserRouter>
