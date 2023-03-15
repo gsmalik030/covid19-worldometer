@@ -12,51 +12,50 @@ const Details = () => {
   }, []);
   const countryDetials = useSelector((store)=> store.details)
   return (
+    <section className='details__box'>
+    <img className='flag' src={flag} alt="flag" />
     <div>
-    <img src={flag} alt="flag" />
-    <div>
-      <p>
-        Name :
-        {country}
-      </p>
-      <p>
+      <p className='details_info even'>
+        Name : {country}
+      </p >
+      <p className='details_info odd'>
       Continent :
         { countryDetials.detailsData.continent }
       </p>
-      <p>
+      <p className='details_info even'>
         Population :
         { countryDetials.detailsData.population }
       </p>
-      <p>
+      <p className='details_info odd'>
         Cases :
         { countryDetials.detailsData.cases }
       </p>
-      <p>
+      <p className='details_info even'>
         Tests :
         { countryDetials.detailsData.tests }
       </p>
-      <p>
+      <p className='details_info odd'>
         Recovered :
         { countryDetials.detailsData.recovered }
       </p>
-      <p>
+      <p className='details_info even'>
         Critical:
         { countryDetials.detailsData.critical }
       </p>
-      <p>
+      <p className='details_info odd'>
         CasePerPeople :
         { countryDetials.detailsData.oneCasePerPeople }
       </p>
-      <p>
+      <p className='details_info even'>
         DeathPerPeople :
         { countryDetials.detailsData.oneDeathPerPeople }
       </p>
-      <p>
+      <p className='details_info odd'>
         TestPerPeople :
         { countryDetials.detailsData.oneTestPerPeople }
       </p>
     </div>
-  </div>
+  </section>
   )
 }
 

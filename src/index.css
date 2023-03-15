@@ -108,6 +108,42 @@ input:focus {
   border: 1px solid #a4161a;
 }
 
+.details__box{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.flag{
+  width: 100%;
+  max-width: 30rem;
+}
+
+.details_info{
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1rem auto;
+  width: 100%;
+  color: aliceblue;
+  border-radius: 4rem;
+  margin: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.even{
+  background-color: #E85D91;
+}
+
+.odd{
+  background-color: #a4161a;
+}
+
 
 
 @media screen and (min-width: 768px){
