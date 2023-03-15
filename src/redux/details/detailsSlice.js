@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 const initialState = {
-  covidData: [],
+  detailsData: [],
   isLoading: true,
 };
 
@@ -26,7 +26,6 @@ const detailsSlice = createSlice({
     },
     [getDetailsData.fulfilled]: (state, action) => {
       state.isLoading = false;
-      console.log(action);
       state.detailsData = action.payload;
     },
     [getDetailsData.rejected]: (state) => {

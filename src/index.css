@@ -13,12 +13,29 @@ code {
     monospace;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1{
+  font-size: 2rem;
+  font-weight: 600;
+  color: #a4161a;
+  text-align: center;
+}
+
 .navbar{
   background-color: rgb(236, 76, 138);
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1.5rem 1rem;
 }
 
 .backArrow{
@@ -30,4 +47,74 @@ code {
   padding-right: 1.5rem;
   display: flex;
   gap: 0.5rem;
+}
+
+.country__info{
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #E85D91;
+  align-items: center;
+}
+
+.world-icon{
+  width: 10rem;
+  height: 10rem;
+  opacity: .3;
+}
+
+.country__name{
+  color: white;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.country__facts{
+  color: white;
+  font-size: 1.4rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+.country__search{
+  border: 1px solid #a4161a;
+  margin: 3rem;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 0.9rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.search__container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #a4161a;
+  margin-left: 2rem;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #a4161a;
+}
+
+
+
+@media screen and (min-width: 768px){
+  .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
 }
