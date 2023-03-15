@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-const url = 'https://disease.sh/v3/covid-19/countries/';
 
 const initialState = {
   covidData: [],
@@ -10,16 +9,16 @@ const initialState = {
 export const getCountryData = createAsyncThunk(
   'country/getCountryData',
   async () => {
-    const url = `https://disease.sh/v3/covid-19/countries`
+    const url = 'https://disease.sh/v3/covid-19/countries';
     try {
-        const resp = await axios(url);
-        const data = resp.data;
-        const countriesData = [];
+      const resp = await axios(url);
+      const { data } = resp;
+      const countriesData = [];
       data.forEach((element) => {
         countriesData.push({
-          id: element.countryInfo._id,
+          id: element.countryInfo.id,
           country: element.country,
-          population:element.population,
+          population: element.population,
           flag: element.countryInfo.flag,
           cases: element.cases,
           deaths: element.deaths,
@@ -29,9 +28,12 @@ export const getCountryData = createAsyncThunk(
           iso: element.countryInfo.iso2,
         });
       });
-    return countriesData;
-    } catch (error) {}
-  }
+      return countriesData;
+    } catch (error) {
+      <h3>{error}</h3>;
+    }
+    return null;
+  },
 );
 
 const countrySlice = createSlice({

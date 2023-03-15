@@ -1,8 +1,8 @@
-import { getDetailsData } from "../redux/details/detailsSlice";
+import { getDetailsData } from '../redux/details/detailsSlice';
 
-describe('Should test detailsReducer',()=>{
-    it('Should return an array', async()=>{
-        const arr = getDetailsData;
-        expect(arr.length).toBe(1);
-    })
-})
+describe('Should test detailsReducer', () => {
+  it('Should return an array', async () => {
+    const arr = getDetailsData;
+    expect(arr.length).toBe(1);
+  });
+});
