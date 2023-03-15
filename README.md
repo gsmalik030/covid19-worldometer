@@ -50,7 +50,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://github.com/gsmalik030/covid19-worldometer) [Coming soon]
+- [Live Demo](https://covid19-worldometer.onrender.com) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
