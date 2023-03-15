@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section>
+  <div
+    className="search__container"
+  >
+    <span>
+      <svg
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="11"
+          cy="11"
+          r="8"
+        />
+        <line
+          x1="21"
+          x2="16.65"
+          y1="21"
+          y2="16.65"
+        />
+      </svg>
+    </span>
+    <input
+      className="country__search"
+      onChange={[Function]}
+      placeholder="Eg: Afghanistan , South Africa"
+    />
+  </div>
+  <div>
+    <h1>
+      STATS BY COUNTRY
+    </h1>
+  </div>
+  <div>
+    <ul
+      className="container"
+    />
+  </div>
+</section>
+`;
