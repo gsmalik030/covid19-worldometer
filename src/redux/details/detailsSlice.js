@@ -1,9 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-const url = 'https://disease.sh/v3/covid-19/countries/';
-
 const initialState = {
-  covidData: [],
+  detailsData: [],
   isLoading: true,
 };
 
@@ -28,7 +26,6 @@ const detailsSlice = createSlice({
     },
     [getDetailsData.fulfilled]: (state, action) => {
       state.isLoading = false;
-      console.log(action);
       state.detailsData = action.payload;
     },
     [getDetailsData.rejected]: (state) => {

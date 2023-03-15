@@ -9,27 +9,27 @@ const initialState = {
 
 export const getCountryData = createAsyncThunk(
   'country/getCountryData',
-  async (country) => {
-    const url = `https://disease.sh/v3/covid-19/countries/${country}`
+  async () => {
+    const url = `https://disease.sh/v3/covid-19/countries`
     try {
         const resp = await axios(url);
         const data = resp.data;
-      //   const countriesData = [];
-      // data.forEach((element) => {
-      //   countriesData.push({
-      //     id: element.countryInfo._id,
-      //     country: element.country,
-      //     population:element.population,
-      //     flag: element.countryInfo.flag,
-      //     cases: element.cases,
-      //     deaths: element.deaths,
-      //     recovered: element.recovered,
-      //     continent: element.continent,
-      //     tests: element.tests,
-      //     iso: element.countryInfo.iso2,
-      //   });
-      // });
-    return data;
+        const countriesData = [];
+      data.forEach((element) => {
+        countriesData.push({
+          id: element.countryInfo._id,
+          country: element.country,
+          population:element.population,
+          flag: element.countryInfo.flag,
+          cases: element.cases,
+          deaths: element.deaths,
+          recovered: element.recovered,
+          continent: element.continent,
+          tests: element.tests,
+          iso: element.countryInfo.iso2,
+        });
+      });
+    return countriesData;
     } catch (error) {}
   }
 );
@@ -43,7 +43,6 @@ const countrySlice = createSlice({
     },
     [getCountryData.fulfilled]: (state, action) => {
       state.isLoading = false;
-      console.log(action);
       state.covidData = action.payload;
     },
     [getCountryData.rejected]: (state) => {
