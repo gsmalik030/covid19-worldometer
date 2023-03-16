@@ -16,45 +16,44 @@ function Details() {
       <img className="flag" src={flag} alt="flag" />
       <div>
         <p className="details_info even">
-          Name :
-          {' '}
-          {country}
+          <span>Name :</span>
+          <span>{country}</span>
         </p>
         <p className="details_info odd">
-          Continent :
-          { countryDetials.detailsData.continent }
+          <span>Continent :</span>
+          <span>{ countryDetials.detailsData.continent }</span>
         </p>
         <p className="details_info even">
-          Population :
-          { countryDetials.detailsData.population }
+          <span>Population :</span>
+          <span>{ countryDetials.detailsData.population }</span>
         </p>
         <p className="details_info odd">
-          Cases :
-          { countryDetials.detailsData.cases }
+          <span>Cases :</span>
+          <span>{ countryDetials.detailsData.cases }</span>
         </p>
         <p className="details_info even">
-          Tests :
-          { countryDetials.detailsData.tests }
+          <span>Tests :</span>
+          <span>{ countryDetials.detailsData.tests }</span>
         </p>
         <p className="details_info odd">
-          Recovered :
-          { countryDetials.detailsData.recovered }
+          <span>Recovered :</span>
+          <span>{ countryDetials.detailsData.recovered }</span>
         </p>
         <p className="details_info even">
-          Critical:
-          { countryDetials.detailsData.critical }
+          <span>Critical:</span>
+          <span>{ countryDetials.detailsData.critical }</span>
         </p>
         <p className="details_info odd">
-          CasePerPeople :
-          { countryDetials.detailsData.oneCasePerPeople }
+          <span>CasePerPeople :</span>
+          <span>{ countryDetials.detailsData.oneCasePerPeople }</span>
         </p>
         <p className="details_info even">
-          DeathPerPeople :
-          { countryDetials.detailsData.oneDeathPerPeople }
+          <span>DeathPerPeople :</span>
+          <span>{ countryDetials.detailsData.oneDeathPerPeople }</span>
         </p>
         <p className="details_info odd">
-          TestPerPeople :
-          { countryDetials.detailsData.oneTestPerPeople }
+          <span>TestPerPeople :</span>
+          <span>{ countryDetials.detailsData.oneTestPerPeople }</span>
         </p>
       </div>
     </section>

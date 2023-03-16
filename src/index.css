@@ -48,12 +48,29 @@ h1 {
 .country__info {
   position: relative;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: #e85d91;
+}
+
+.world__info {
+  position: relative;
+  display: flex;
   background-color: #e85d91;
   align-items: center;
 }
 
+.world__container {
+  justify-content: space-evenly;
+}
+
 .world-icon {
+  width: 5rem;
+  height: 5rem;
+  opacity: 0.3;
+  margin: 0.5rem auto;
+}
+
+.world-map {
   width: 10rem;
   height: 10rem;
   opacity: 0.3;
@@ -62,19 +79,22 @@ h1 {
 .country__name {
   color: white;
   font-size: 2rem;
-  margin: 1rem 0;
+  margin: 0 1rem;
+  text-align: end;
 }
 
 .country__facts {
   color: white;
   font-size: 1.4rem;
+  justify-content: flex-end;
+  margin-right: 1rem;
   display: flex;
   gap: 1rem;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   padding: 1rem;
 }
@@ -112,7 +132,6 @@ input:focus {
   padding: 1rem;
   justify-content: center;
   align-items: center;
-  width: 80%;
   margin: 0 auto;
 }
 
@@ -122,14 +141,14 @@ input:focus {
 }
 
 .details_info {
+  display: flex;
   font-size: 1.8rem;
+  width: 100vw;
+  max-width: 30rem;
   font-weight: 600;
-  width: 100%;
   color: aliceblue;
-  border-radius: 4rem;
-  margin: 1rem;
-  text-align: center;
   padding: 0.5rem;
+  justify-content: space-between;
 }
 
 .even {
@@ -143,7 +162,7 @@ input:focus {
 @media screen and (min-width: 768px) {
   .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     padding: 1rem;
   }

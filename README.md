@@ -45,12 +45,11 @@
 - Showcase covid 19 statistics
 - Show details stats about covid
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://covid19-worldometer.onrender.com) 
+- [Live Demo](https://covid19-worldometer.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -58,14 +57,12 @@
 
 ### Prerequisites
 
-
-
 ### Setup
 
 Clone this repository to your desired folder:
 
 ```sh
-  cd math-magicians
+  cd covid19-worldometer
   git clone https://github.com/gsmalik030/covid19-worldometer
 ```
 
@@ -74,7 +71,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd math-magicians
+  cd covid19-worldometer
   git clone https://github.com/gsmalik030/covid19-worldometer
   npm install
 ```
@@ -84,7 +81,7 @@ Install this project with:
 Use this app by runing:
 
 ```sh
-   cd math-magicians
+   cd covid19-worldometer
   git clone https://github.com/gsmalik030/covid19-worldometer
   npm install
   npm start
@@ -95,15 +92,13 @@ Use this app by runing:
 Test this app by runing:
 
 ```sh
-  cd math-magicians
+  cd covid19-worldometer
   git clone https://github.com/gsmalik030/covid19-worldometer
   npm install
   npm test
 ```
 
 ### Deployment
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,7 +108,7 @@ Test this app by runing:
 
 - GitHub: [@githubhandle](https://github.com/gsmalik030)
 - Twitter: [@twitterhandle](https://twitter.com/gsmalik030)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ghulam-subbhani-4b1281252/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/gsmalik030)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -140,7 +135,7 @@ If you like this project, please, give a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank to all my Microverse partners.
+I would like to thank [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
