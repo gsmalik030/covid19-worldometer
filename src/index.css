@@ -19,7 +19,7 @@ a {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #a4161a;
   text-align: center;
@@ -64,8 +64,8 @@ h1 {
 }
 
 .world-icon {
-  width: 5rem;
-  height: 5rem;
+  max-width: 5rem;
+  min-height: 5rem;
   opacity: 0.3;
   margin: 0.5rem auto;
 }
@@ -163,6 +163,15 @@ input:focus {
   .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     padding: 1rem;
   }
